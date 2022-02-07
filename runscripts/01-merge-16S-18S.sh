@@ -12,7 +12,7 @@ normalizing_16S_18S_tags/normalize_16S_18S_ASVs.R \
   --inputproks tmp.16S.chloroplast.renamed.tsv \
   --inputeuks 02-EUKs/15-exports/all-18S-seqs.with-PR2-tax.tsv \
   --outputfile 220120_P16N-S \
-  --bias 4.36 
+  --bias 3.15 
 
 #move output files to subfolder
 mv 220120_P16N-S* 03-Merged/
