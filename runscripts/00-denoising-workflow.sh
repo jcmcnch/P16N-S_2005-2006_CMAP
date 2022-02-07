@@ -22,7 +22,7 @@ cd 02-PROKs
 #These biom tables are then the input for merging scripts
 ./scripts/P10-generate-tsv-biom-tables-with-taxonomy.sh
 #following step optional, gives you proportional data to play with
-#./scripts/P11-transform-tsv-to-proportions.sh
+./scripts/P11-transform-tsv-to-proportions.sh
 #./scripts/P12a-remake-barplot-with-PhytoRef-taxonomy.sh
 #./scripts/P12-make-subsetted-barplots.sh
 #./scripts/P13-exclude-samples-from-barplots.sh
@@ -49,7 +49,7 @@ cd ../02-EUKs
 #./scripts/E13-optionally-cluster-eASVs.sh
 ./scripts/E14-split-metazoans-PR2-alternative-class.sh
 ./scripts/E15-generate-tsv-biom-tables-with-taxonomy.sh
-#./scripts/E16-transform-tsv-to-proportions.sh
+./scripts/E16-transform-tsv-to-proportions.sh
 #./scripts/E17-make-subsetted-barplots.sh
 #./scripts/E18-exclude-samples-from-barplots.sh
 #./scripts/E19-optional-reclassify-multiple-p-confidence.sh
