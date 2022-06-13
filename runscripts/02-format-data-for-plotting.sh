@@ -29,10 +29,12 @@ rm 04-Formatted/tmp* 2> /dev/null
 
 conda activate opedia-env
 
-touch empty-file
+#ahead of time, create file to specify which samples have <5000 QC'd sequences for the 16S fraction, e.g.
+#touch lt5000seq-samples.txt
+#then edit manually to add in appropriate sample IDs
 
 #remove empty rows with pandas, passing empty-file as sys.argv[1]
-./eASV-pipeline-for-515Y-926R/DADA2-pipeline/02-utility-scripts/remove-bad-columns-and-empty-rows.py empty-file 04-Formatted/${filestem}_normalized_sequence_counts_reordered.tsv 04-Formatted/${filestem}_normalized_sequence_counts_reordered.empty-rows-removed.tsv
+./eASV-pipeline-for-515Y-926R/DADA2-pipeline/02-utility-scripts/remove-bad-columns-and-empty-rows.py lt5000seq-samples.txt 04-Formatted/${filestem}_normalized_sequence_counts_reordered.tsv 04-Formatted/${filestem}_normalized_sequence_counts_reordered.empty-rows-removed.tsv
 
-./eASV-pipeline-for-515Y-926R/DADA2-pipeline/02-utility-scripts/remove-bad-columns-and-empty-rows.py empty-file 04-Formatted/${filestem}_proportions_reordered.tsv 04-Formatted/${filestem}_proportions_reordered.empty-rows-removed.tsv
+./eASV-pipeline-for-515Y-926R/DADA2-pipeline/02-utility-scripts/remove-bad-columns-and-empty-rows.py lt5000seq-samples.txt 04-Formatted/${filestem}_proportions_reordered.tsv 04-Formatted/${filestem}_proportions_reordered.empty-rows-removed.tsv
 
